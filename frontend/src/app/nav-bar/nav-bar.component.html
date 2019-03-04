@@ -1,0 +1,39 @@
+<!-- Navbar container start -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <!-- Amnick Logo -->
+  <!-- TODO: Change dimensions and add AMNICK text to the link -->
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/Logo.png" width="80" height="80" class="d-inline-block align-top" alt="">
+  </a>
+  <span class="font-weight-bold custom-color custom-font">AMNICK</span>
+
+  <!-- Menu button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menu navigation list -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto  mr-5 font-weight-bold">
+      <li class="nav-item px-2">
+        <!-- routerLinkActive: Set an a class when the link is active -->
+        <a
+          class="nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item  px-2">
+        <!-- TODO: Add a dropdown menu for the other about pages -->
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item  px-2">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<!-- Navbar container end -->

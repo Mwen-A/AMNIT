@@ -1,0 +1,30 @@
+/* What we do purple background image */
+.bg-3 {
+  background-image: url("../../../assets/img/bg-3.png");
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Our work button styles */
+.tab {
+  margin-left:25px;
+  cursor: pointer;
+}
+
+.tab.active {
+  padding:10px;
+  background: white;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Our work images styles */
+.workimages .col-md-4 {
+  margin: 0;
+  padding:0;
+}
+
+.workimages img {
+  width:100%;
+}

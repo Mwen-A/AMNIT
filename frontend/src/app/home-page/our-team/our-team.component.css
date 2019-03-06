@@ -1,0 +1,17 @@
+/* Our team purple background image */
+.bg-4 {
+  background-image: url("../../../assets/img/bg-4.png");
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Social container styles */
+.social{
+  text-align: center;
+  font-size:1.5rem;
+  color: #13547a;
+}
+.social .fab{
+  margin:0.5rem;
+  cursor: pointer;
+}

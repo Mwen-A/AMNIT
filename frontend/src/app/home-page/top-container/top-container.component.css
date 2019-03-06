@@ -1,0 +1,28 @@
+/* Top container background image */
+.bg1{
+  width: 100%;
+  background-image: url("../../../assets/img/Group6.png");
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  padding-top: 1px;
+  margin: 0;
+  height: 700px; /* TODO: Fix background and make it responsive and not stretching */
+}
+
+/* Card container background */
+.bg1 .bg-secondary {
+  background-color:  rgba(250,250,250,.8) !important;
+}
+
+/* Consider making the container into a flex container and center card1 */
+.card1{
+  border-radius: 10px;
+  margin-top: 180px;
+  margin-left:5%;
+  box-shadow: 4px 6px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.fa-angle-down{
+  font-size: 50px;
+  margin:270px auto; /* Consider using different techniques as it differs on different screens */
+}

@@ -1,0 +1,35 @@
+/* Newsletter whitebox container */
+.shape {
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  padding: 7px;
+}
+
+/* Newsletter font size */
+.news {
+  font-size:20px;
+}
+
+/* Newsletter input styles. TODO: Change into class */
+input {
+  font-size: 18px;
+  width: 55%;
+  border: none;
+  border-radius: 30px;
+  background: #BBBBBB;
+  padding: 12px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Newsletter subscribe button styles */
+.btn-custom1 {
+  background: #4D4B86;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin-left:-85px;
+  border-radius: 30px;
+  padding: 12px;
+  position: absolute;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}

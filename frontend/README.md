@@ -10,6 +10,21 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Git branches
+
+Run `$ git checkout -b branch-name` to create a branch with name 'branch-name' and switch the development to that branch.
+
+This is shorhand to:
+
+```
+$ git branch branch-name
+$ git checkout branch-name
+```
+
+Run `$ git branch` to check the branches and to see which branch you are currently working with.
+
+For detailed tutorial check: [Git - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.

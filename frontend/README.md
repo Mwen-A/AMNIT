@@ -21,7 +21,31 @@ $ git branch branch-name
 $ git checkout branch-name
 ```
 
-Run `$ git branch` to check the branches and to see which branch you are currently working with.
+- Run `$ git branch` to check the branches and to see which branch you are currently working with.
+- Run `$ git checkout branch-name` to switch the development to that branch.
+
+Example:
+
+```
+$ git checkout -b home-page-who  // It will create a branch called called home-page-who and switch to that branch
+
+// Start working on that file and then commit the files.
+$ git status  // It will check for the changes made to the files.
+$ git add .  // It will stage all the changed files to be commited. You can use a filename instead of the period.
+
+  $ git commit -m 'feat: Made something great in the home-page'  // It will commit the files with the message 'feat....'.
+    or
+  $ git commit  // It will open your code editor to write a more descriptive message.
+  
+// Commit the changes to the master branch.
+$ git checkout master  // It will switch the development to the master branch.
+$ git pull origin master  // It will fetch any changes made to the remote repository.
+$ git merge home-page-who  // It will merge the commits made to the master branch. Please check the detailed tutorial if you have any problems or face a merge conflict.
+$ git push origin master  // It will send the commits made to the remote repository.
+
+// If you are done with the home-page-who branch you can delete it.
+$ git branch -d home-page-who  // It will delete the branch called home-page-who.
+```
 
 For detailed tutorial check: [Git - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 

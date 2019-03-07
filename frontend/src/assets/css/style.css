@@ -70,6 +70,13 @@ body{
   font-weight: 600;
 }
 
+.btn-custom:hover, .btn-custom:focus {
+  color: #4D4B86;
+  border-color: #4D4B86;
+  background: white;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
 /* Headings bottom line */
 .line{
   width:80px;

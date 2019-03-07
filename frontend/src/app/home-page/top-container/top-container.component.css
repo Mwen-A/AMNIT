@@ -2,14 +2,32 @@
 .top-container {
   min-height: 95vh; /* Display at least 95% of the visual display */
   position: relative; /* Relative position to place the arrow on the bottom */
+  padding: 1.5em;
 }
 
 /* Top container background image */
 .bg1{
-  background-image: url("../../../assets/img/Group6.png");
+  background-image: url("../../../assets/img/home-top-container-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  position: relative; /* Relative position to add a pseudo element for the bottom bg */
+}
+
+/* Add the bottom white background */
+.bg1::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 140px;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../../assets/img/Path3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% bottom;
+  transform: rotateX(180deg);
+  z-index: 1;
 }
 
 /* Card container background */
@@ -32,6 +50,7 @@
   /* ALign in the center */
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .btn-arrow {
@@ -50,4 +69,12 @@
   color: white;
   border-color: #333;
   background-color: #333;
+}
+
+/* Large screen styles */
+@media screen and (min-width: 992px) {
+  /* Welcome container */
+  .card1 {
+    margin-left: 5em;
+  }
 }

@@ -7,15 +7,15 @@
       <p class="card-text pl-2">
         This is the Web Development's team website of AMNICK Social Enterprise. AMNICK is creating e-work experience programs to make everyone more employable.
       </p>
-      <a routerLink="/about">
-        <button class="btn btn-custom px-5 ml-8">Learn More</button>
-      </a>
+      <div class="text-center">
+        <a routerLink="/about" class="btn btn-custom px-5">Learn More</a>
+      </div>
     </div>
   </div>
 
   <div class="arrow-container">
-    <!-- TODO: Add a function that will scroll to next section -->
-    <button class="btn btn-arrow">
+    <!-- On click scroll to the element with class bg-2 -->
+    <button class="btn btn-arrow" (click)="scrollIntoView('.bg-2')">
       <i class="fas fa-angle-down"></i>
     </button>
   </div>

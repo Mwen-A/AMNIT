@@ -78,3 +78,10 @@
     margin-left: 5em;
   }
 }
+
+/* Landscape styles for mobile screens */
+@media screen and (orientation: landscape) and (max-height: 440px) {
+  .card1 {
+    margin: 80px 0;
+  }
+}

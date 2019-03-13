@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+
+import { TeamService } from './team.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,9 +37,10 @@ import { NewsletterComponent } from './home-page/newsletter/newsletter.component
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, // Import HttpClientModule to be able to use http requests
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

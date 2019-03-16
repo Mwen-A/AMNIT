@@ -45,24 +45,6 @@ body{
   color:#4D4B86;
 }
 
-/* Flex styles */
-.flex {
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-items-center {
-  align-items: center;
-}
-
-.flex-content-center {
-  justify-content: center;
-}
-
 /* Custom button styles */
 .btn-custom{
   background: #4D4B86;
@@ -91,12 +73,6 @@ body{
 .col img{
   width: 100%;
   height: 550px;
-}
-
-/* Card top image styles */
-.card-img-top {
-  width:50%;
-  margin:20px auto;
 }
 
 @media(max-width:550px){

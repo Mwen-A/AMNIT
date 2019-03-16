@@ -5,13 +5,30 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 767.9px) {
+  .bg-4 {
+    background-image: linear-gradient(135deg, rgba(95, 93, 218, 1) 50%, transparent 50%);
+  }
+  /* Let a top margin between the cards on medium screens */
+  .col-md-4 + .col-md-4 {
+    margin-top: 1rem;
+  }
+}
+
+/* Card containers styles */
+.card {
+  max-width: 350px;
+  margin: 0 auto;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Card top image styles */
+.card-img-top {
+  width:50%;
+  margin:20px auto;
+}
+
 /* Social container styles */
 .social{
-  text-align: center;
   font-size:1.5rem;
-  color: #13547a;
-}
-.social .fab{
-  margin:0.5rem;
-  cursor: pointer;
 }

@@ -3,6 +3,8 @@
   min-height: 95vh; /* Display at least 95% of the visual display */
   position: relative; /* Relative position to place the arrow on the bottom */
   padding: 1.5em;
+  display: flex;
+  align-items: center;
 }
 
 /* Top container background image */

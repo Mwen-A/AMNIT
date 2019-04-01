@@ -18,6 +18,7 @@ import { WhatWeDoComponent } from './home-page/what-we-do/what-we-do.component';
 import { OurWorkComponent } from './home-page/our-work/our-work.component';
 import { OurTeamComponent } from './home-page/our-team/our-team.component';
 import { NewsletterComponent } from './home-page/newsletter/newsletter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,10 @@ import { NewsletterComponent } from './home-page/newsletter/newsletter.component
   imports: [
     BrowserModule,
     HttpClientModule, // Import HttpClientModule to be able to use http requests
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [TeamService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

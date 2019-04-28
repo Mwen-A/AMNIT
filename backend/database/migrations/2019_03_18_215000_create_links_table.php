@@ -16,8 +16,8 @@ class CreateLinksTable extends Migration
 
         Schema::create('links', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->string('title');
+            $table->integer('team_member_id');
+            $table->integer('icon_id');
             $table->string('url');
             $table->timestamps();
         });
@@ -26,24 +26,24 @@ class CreateLinksTable extends Migration
         DB::table('links')->insert(
             array(
                 'id'=>'1',
-                'user_id' => '1',
-                'title' => 'GitHub',
+                'team_member_id' => '1',
+                'icon_id' => '1',
                 'url' => 'https://github.com/markoboy'
             ));
 
             DB::table('links')->insert(
             array(
                 'id'=>'2',
-                'user_id' => '1',
-                'title' => 'LinkedIn',
+                'team_member_id' => '1',
+                'icon_id' => '1',
                 'url' => 'https://github.com/markoboy'
             ));
 
             DB::table('links')->insert(
                 array(
                     'id'=>'3',
-                    'user_id' => '2',
-                    'title' => 'GitHub',
+                    'team_member_id' => '2',
+                    'icon_id' => '1',
                     'url' => 'https://github.com/eslylescano'
                 ));
 
@@ -51,8 +51,8 @@ class CreateLinksTable extends Migration
                 DB::table('links')->insert(
                     array(
                         'id'=>'4',
-                        'user_id' => '3',
-                        'title' => 'GitHub',
+                        'team_member_id' => '3',
+                        'icon_id' => '1',
                         'url' => 'https://github.com/Mwen-A'
                     ));
 

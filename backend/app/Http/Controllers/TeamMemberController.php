@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\TeamMember;
 use Illuminate\Http\Request;
-use App\User;
-use Illuminate\Support\Facades\DB;
 
-
-class UserController extends Controller
+class TeamMemberController extends Controller
 {
-    /**
+/**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -17,7 +15,8 @@ class UserController extends Controller
     public function index()
     {
 
-        return User::with('links.icons')->get();
+        return TeamMember::with('links.icons')->get();
+
     }
 
     /**
@@ -38,27 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        /*
-                    $table->string('name');
-            $table->string('last_name');
-            $table->string('full_name');
-            $table->string('occupation');
-            $table->string('avatar');
-            $table->string('email')->unique();
-        */
-        $request->validate([
-            'name'=>'required',
-            'email'=>'required'
-        ]);
 
-        $user = new User;
-        $user->name=$request->name;
-        $user->email=$request->email;
-
-        $user->save();
-
-        return $user;
 
     }
 

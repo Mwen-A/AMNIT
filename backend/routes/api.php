@@ -33,5 +33,9 @@ Route::group([
 
 });
 
+//Route::group(['middleware'=>'auth'],function(){
+    Route::resource('team_members', 'TeamMemberController');
+//});
+
 Route::resource('users', 'UserController');
-Route::resource('team_members', 'TeamMemberController');
+

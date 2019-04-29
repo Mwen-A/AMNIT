@@ -15,12 +15,12 @@ class CreateTeamMembersTable extends Migration
     {
         Schema::create('team_members', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('full_name')->nullable();
             $table->string('occupation')->nullable();
             $table->string('avatar')->nullable();
-            $table->string('email')->unique();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
 

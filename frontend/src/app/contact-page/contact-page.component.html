@@ -1,3 +1,78 @@
-<p>
-  contact-page works!
-</p>
+<!-- Container for the form -->
+<div class="container pb-3">
+  <!-- Display heading -->
+  <h1 class="display-3 text-center mb-4">CONTACT</h1>
+  <h5 class="text-center">
+    Need to ask a question or make an enquiry? Send us a message by using our
+    contact form on this page, send us an email or give us a call on the number
+    below.
+  </h5>
+  <br />
+  <!-- A row -->
+  <div class="row">
+    <!-- First column for the form -->
+    <div class="col-md-6">
+      <h5 class="success" *ngIf="success">
+        Your message has been submitted, we will be in touch with you shortly!
+      </h5>
+      <form [formGroup]="messageForm" *ngIf="!success" (ngSubmit)="onSubmit()">
+
+        <!-- Label & input field for name -->
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" class="form-control input-enter" formControlName="name" id="fullname"
+            placeholder="Full Name" [(ngModel)]="userModel.name" />
+
+          <!-- Error message for fullname -->
+          <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+            <div *ngIf="messageForm.controls.name.errors.required">
+              Your Name is required!
+            </div>
+          </div>
+        </div>
+
+        <!-- Label & input field for email -->
+        <div class="form-group mt-4">
+          <label for="email">Email</label>
+          <input type="text" class="form-control input-enter" formControlName="email" id="email" placeholder="Email"
+            [(ngModel)]="userModel.email" />
+
+          <!-- Error message for Email -->
+          <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+            <div *ngIf="messageForm.controls.email.errors.required">
+              Your email is required!
+            </div>
+          </div>
+        </div>
+
+        <!-- Textarea for comments and enquiry -->
+        <div class="form-group mt-5">
+          <label for="comment">Enquiries</label>
+          <textarea name="comment" id="comment" cols="74" rows="6" class=" form-control input-enter"
+            formControlName="message" placeholder="Leave a comment or ask a question"
+            [(ngModel)]="userModel.message"></textarea>
+
+          <!-- Error message for textarea -->
+          <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+            <div *ngIf="messageForm.controls.message.errors.required">
+              Your message is required!
+            </div>
+          </div>
+        </div>
+
+        <!-- Button to submit form -->
+        <div class="form-group text-center mt-5">
+          <button type="submit" class="btn btn-info btn-lg center cta">
+            Submit Enquiry
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Second column for address -->
+    <div class="col-md-6 address text-center">
+      <h3>Currently looking for a new office</h3>
+      <h3>+44 7886 837 410</h3>
+      <h3>info@amnick.com</h3>
+    </div>
+  </div>
+</div>

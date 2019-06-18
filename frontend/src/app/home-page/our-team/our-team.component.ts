@@ -16,7 +16,15 @@ export class OurTeamComponent implements OnInit {
 
   ngOnInit() {
     // Get the members from the teamService
-    this.teamMembers = this.teamService.getMembers();
+    //this.teamMembers = this.teamService.getMembers();
+
+    this.teamService.getTeamMembers().subscribe(
+      (teamMembers: TeamMember[]) => {
+      this.teamMembers = teamMembers;
+      console.log(this.teamService.getMembers());
+      console.log(this.teamMembers);
+      }
+    );
 
     // Get the members with http request
     // this.teamService.getTeamMembers()

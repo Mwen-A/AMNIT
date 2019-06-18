@@ -9,8 +9,8 @@ const teamMembers: TeamMember[] = [
   {
     id: 0,
     name: 'Athanasios',
-    lastName: 'Markou',
-    fullName: 'Athanasios Markou',
+    last_name: 'Markou',
+    full_name: 'Athanasios Markou',
     occupation: 'Front-End Developer',
     avatar: 'https://avatars0.githubusercontent.com/u/35178536?s=460&v=4',
     email: 'thanasismarko@gmail.com',
@@ -18,16 +18,16 @@ const teamMembers: TeamMember[] = [
       {
         title: 'GitHub',
         url: 'https://github.com/markoboy',
-        icon: {
+        icons: {
           type: 'fab',
           url: 'fa-github',
           color: '#000'
         }
       },
       {
-        title: 'LinkedIn',
+        title: 'LinkedI',
         url: 'https://github.com/markoboy',
-        icon: {
+        icons: {
           type: 'fab',
           url: 'fa-linkedin-in',
           color: '#00d'
@@ -38,8 +38,8 @@ const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: 'Esly',
-    lastName: 'Lescano',
-    fullName: 'Esly Lescano',
+    last_name: 'Lescano',
+    full_name: 'Esly Lescano',
     occupation: 'Web Developer',
     avatar: 'https://avatars3.githubusercontent.com/u/11892083?s=460&v=4',
     email: 'test@email.com',
@@ -47,7 +47,7 @@ const teamMembers: TeamMember[] = [
       {
         title: 'GitHub',
         url: 'https://github.com/eslylescano',
-        icon: {
+        icons: {
           type: 'fab',
           url: 'fa-github',
           color: '#000'
@@ -58,8 +58,8 @@ const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: 'Jennifer',
-    lastName: 'Mwen',
-    fullName: 'Jennifer Mwen',
+    last_name: 'Mwen',
+    full_name: 'Jennifer Mwen',
     occupation: 'Web Developer',
     avatar: 'https://avatars2.githubusercontent.com/u/45672207?s=460&v=4',
     email: 'test@email.com',
@@ -67,7 +67,7 @@ const teamMembers: TeamMember[] = [
       {
         title: 'GitHub',
         url: 'https://github.com/Mwen-A',
-        icon: {
+        icons: {
           type: 'fab',
           url: 'fa-github',
           color: '#000'
@@ -83,7 +83,8 @@ const teamMembers: TeamMember[] = [
 export class TeamService {
 
   // TODO: Add the url from where we fetch the team data.
-  private url = '';
+  private url = 'http://amnick-web-team-api.tk/api/team_members';
+
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -102,7 +103,7 @@ export class TeamService {
     return this.http.get<TeamMember[]>(this.url)
       .pipe(
         // Log the results on the console
-        tap(_ => console.log('Fetched members: ', _)),
+        //tap(_ => console.log('Fetched members: ', _)),
         // Handle any error occured
         catchError(this.handleError)
       );
@@ -114,7 +115,7 @@ export class TeamService {
    * @returns An observable of type TeamMember
    */
   getTeamMember(id: number): Observable<TeamMember> {
-    return this.http.get<TeamMember>(`${this.url}/${id}`)
+    return this.http.get<any>(`${this.url}/${id}`)
       .pipe(
         // Log the results on the console
         tap(_ => console.log('Fetched member: ', _)),
@@ -186,4 +187,6 @@ export class TeamService {
       'An error occured when getting team members; please try again later.'
     );
   }
+
+
 }

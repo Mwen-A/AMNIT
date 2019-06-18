@@ -1,8 +1,8 @@
 export interface TeamMember {
   id: number;
   name: string;
-  lastName: string;
-  fullName: string;
+  last_name: string;
+  full_name: string;
   occupation: string;
   avatar: string;
   email: string;
@@ -10,7 +10,7 @@ export interface TeamMember {
   links: {
     title: string,
     url: string,
-    icon: {
+    icons: {
       type: string, /* Wethear its fontAwesome (fas-fab-etc..) or link to an icon */
       url: string,
       color: string

@@ -235,6 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_page_our_work_our_work_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./home-page/our-work/our-work.component */ "./src/app/home-page/our-work/our-work.component.ts");
 /* harmony import */ var _home_page_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./home-page/our-team/our-team.component */ "./src/app/home-page/our-team/our-team.component.ts");
 /* harmony import */ var _home_page_newsletter_newsletter_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./home-page/newsletter/newsletter.component */ "./src/app/home-page/newsletter/newsletter.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
@@ -277,7 +279,8 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ReactiveFormsModule"]
             ],
             providers: [_team_service__WEBPACK_IMPORTED_MODULE_4__["TeamService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -297,7 +300,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QtcGFnZS9jb250YWN0LXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "/* style color for block elements */\nh1,\nh3,\nh5,\nlabel,\ninput,\n::-webkit-input-placeholder {\n  color: #5A568D;\n}\nh1,\nh3,\nh5,\nlabel,\ninput,\n::-ms-input-placeholder {\n  color: #5A568D;\n}\nh1,\nh3,\nh5,\nlabel,\ninput,\n::placeholder {\n  color: #5A568D;\n}\n/* style border for all input fields */\n.input-enter {\n  border: 2px solid #5A568D;\n}\n/* style color button */\n.btn {\n  background: #5A568D !important;\n}\n/* style margin for address */\n.address {\n  margin-top: 120px;\n}\n/* style error messages */\n.error {\n  color: red;\n}\n/* style success message */\n.success {\n  color: green\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC1wYWdlL2NvbnRhY3QtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG9DQUFvQztBQUNwQzs7Ozs7O0VBTUUsZUFBZTtDQUNoQjtBQVBEOzs7Ozs7RUFNRSxlQUFlO0NBQ2hCO0FBUEQ7Ozs7OztFQU1FLGVBQWU7Q0FDaEI7QUFFRCx1Q0FBdUM7QUFDdkM7RUFDRSwwQkFBMEI7Q0FDM0I7QUFFRCx3QkFBd0I7QUFDeEI7RUFDRSwrQkFBK0I7Q0FDaEM7QUFFRCw4QkFBOEI7QUFDOUI7RUFDRSxrQkFBa0I7Q0FDbkI7QUFFRCwwQkFBMEI7QUFDMUI7RUFDRSxXQUFXO0NBQ1o7QUFFRCwyQkFBMkI7QUFDM0I7RUFDRSxZQUFZO0NBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb250YWN0LXBhZ2UvY29udGFjdC1wYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBzdHlsZSBjb2xvciBmb3IgYmxvY2sgZWxlbWVudHMgKi9cbmgxLFxuaDMsXG5oNSxcbmxhYmVsLFxuaW5wdXQsXG46OnBsYWNlaG9sZGVyIHtcbiAgY29sb3I6ICM1QTU2OEQ7XG59XG5cbi8qIHN0eWxlIGJvcmRlciBmb3IgYWxsIGlucHV0IGZpZWxkcyAqL1xuLmlucHV0LWVudGVyIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzVBNTY4RDtcbn1cblxuLyogc3R5bGUgY29sb3IgYnV0dG9uICovXG4uYnRuIHtcbiAgYmFja2dyb3VuZDogIzVBNTY4RCAhaW1wb3J0YW50O1xufVxuXG4vKiBzdHlsZSBtYXJnaW4gZm9yIGFkZHJlc3MgKi9cbi5hZGRyZXNzIHtcbiAgbWFyZ2luLXRvcDogMTIwcHg7XG59XG5cbi8qIHN0eWxlIGVycm9yIG1lc3NhZ2VzICovXG4uZXJyb3Ige1xuICBjb2xvcjogcmVkO1xufVxuXG4vKiBzdHlsZSBzdWNjZXNzIG1lc3NhZ2UgKi9cbi5zdWNjZXNzIHtcbiAgY29sb3I6IGdyZWVuXG59XG4iXX0= */"
 
 /***/ }),
 
@@ -308,7 +311,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  contact-page works!\n</p>\n"
+module.exports = "<!-- Container for the form -->\n<div class=\"container pb-3\">\n  <!-- Display heading -->\n  <h1 class=\"display-3 text-center mb-4\">CONTACT</h1>\n  <h5 class=\"text-center\">\n    Need to ask a question or make an enquiry? Send us a message by using our\n    contact form on this page, send us an email or give us a call on the number\n    below.\n  </h5>\n  <br />\n  <!-- A row -->\n  <div class=\"row\">\n    <!-- First column for the form -->\n    <div class=\"col-md-6\">\n      <h5 class=\"success\" *ngIf=\"success\">\n        Your message has been submitted, we will be in touch with you shortly!\n      </h5>\n      <form [formGroup]=\"messageForm\" *ngIf=\"!success\" (ngSubmit)=\"onSubmit()\">\n\n        <!-- Label & input field for name -->\n        <div class=\"form-group\">\n          <label for=\"fullname\">Full Name</label>\n          <input type=\"text\" class=\"form-control input-enter\" formControlName=\"name\" id=\"fullname\"\n            placeholder=\"Full Name\" [(ngModel)]=\"userModel.name\" />\n\n          <!-- Error message for fullname -->\n          <div *ngIf=\"submitted && messageForm.controls.name.errors\" class=\"error\">\n            <div *ngIf=\"messageForm.controls.name.errors.required\">\n              Your Name is required!\n            </div>\n          </div>\n        </div>\n\n        <!-- Label & input field for email -->\n        <div class=\"form-group mt-4\">\n          <label for=\"email\">Email</label>\n          <input type=\"text\" class=\"form-control input-enter\" formControlName=\"email\" id=\"email\" placeholder=\"Email\"\n            [(ngModel)]=\"userModel.email\" />\n\n          <!-- Error message for Email -->\n          <div *ngIf=\"submitted && messageForm.controls.email.errors\" class=\"error\">\n            <div *ngIf=\"messageForm.controls.email.errors.required\">\n              Your email is required!\n            </div>\n          </div>\n        </div>\n\n        <!-- Textarea for comments and enquiry -->\n        <div class=\"form-group mt-5\">\n          <label for=\"comment\">Enquiries</label>\n          <textarea name=\"comment\" id=\"comment\" cols=\"74\" rows=\"6\" class=\" form-control input-enter\"\n            formControlName=\"message\" placeholder=\"Leave a comment or ask a question\"\n            [(ngModel)]=\"userModel.message\"></textarea>\n\n          <!-- Error message for textarea -->\n          <div *ngIf=\"submitted && messageForm.controls.message.errors\" class=\"error\">\n            <div *ngIf=\"messageForm.controls.message.errors.required\">\n              Your message is required!\n            </div>\n          </div>\n        </div>\n\n        <!-- Button to submit form -->\n        <div class=\"form-group text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-info btn-lg center cta\">\n            Submit Enquiry\n          </button>\n        </div>\n      </form>\n    </div>\n    <!-- Second column for address -->\n    <div class=\"col-md-6 address text-center\">\n      <h3>Currently looking for a new office</h3>\n      <h3>+44 7886 837 410</h3>\n      <h3>info@amnick.com</h3>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -324,22 +327,100 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageComponent", function() { return ContactPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user */ "./src/app/user.ts");
+/* harmony import */ var _enquire_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../enquire.service */ "./src/app/enquire.service.ts");
+
+
+
 
 
 var ContactPageComponent = /** @class */ (function () {
-    function ContactPageComponent() {
+    // Constructor for formBuilder and EnquireService imports
+    function ContactPageComponent(formBuilder, _enquireService) {
+        this.formBuilder = formBuilder;
+        this._enquireService = _enquireService;
+        this.submitted = false;
+        this.success = false;
+        // userModel constructor call to display user input details from User.ts
+        this.userModel = new _user__WEBPACK_IMPORTED_MODULE_3__["User"]('', '', '');
+        // validators
+        this.messageForm = this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            message: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
     }
-    ContactPageComponent.prototype.ngOnInit = function () {
+    ContactPageComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+        if (this.messageForm.invalid) {
+            return;
+        }
+        else {
+            this.success = true;
+        }
+        // Check if data is submitted or not
+        this._enquireService
+            .enquire(this.userModel)
+            .subscribe(function (data) { return console.log('Success!', data); }, function (error) { return console.error('Error!', error); });
+        // timeout method to hide input details
+        // setTimeout(() => {
+        //   this.userModel.name = '';
+        //   this.userModel.email = '';
+        //   this.userModel.message = '';
+        // }, 3000);
+        setTimeout(function () { return window.location.reload(); }, 3000);
     };
+    ContactPageComponent.prototype.ngOnInit = function () { };
     ContactPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-contact-page',
             template: __webpack_require__(/*! ./contact-page.component.html */ "./src/app/contact-page/contact-page.component.html"),
             styles: [__webpack_require__(/*! ./contact-page.component.css */ "./src/app/contact-page/contact-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _enquire_service__WEBPACK_IMPORTED_MODULE_4__["EnquireService"]])
     ], ContactPageComponent);
     return ContactPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/enquire.service.ts":
+/*!************************************!*\
+  !*** ./src/app/enquire.service.ts ***!
+  \************************************/
+/*! exports provided: EnquireService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnquireService", function() { return EnquireService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var EnquireService = /** @class */ (function () {
+    function EnquireService(_http) {
+        this._http = _http;
+        // Url for address to post data
+        this._url = 'http://localhost:3000/enquire';
+    }
+    // method for http request to post data
+    EnquireService.prototype.enquire = function (user) {
+        return this._http.post(this._url, user);
+    };
+    EnquireService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], EnquireService);
+    return EnquireService;
 }());
 
 
@@ -364,7 +445,7 @@ module.exports = ".line-height{\n  line-height: 14px;\n}\n\n/*# sourceMappingURL
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Footer container start -->\n<div class=\"container-fluid\" style=\"background:#333333;\">\n  <div class=\"row py-5\">\n    <div class=\"col-sm-3 col-lg-2 offset-lg-2 text-light\">\n      <img class=\"ml-4\" src=\"assets/img/Logo.png\">\n      <p>&copy; Amnick 2018</p>\n    </div>\n\n    <div class=\"col-sm-3 col-lg-2  text-light line-height pt-2\">\n      <!-- TODO: Convert to links -->\n      <p>About Us</p>\n      <p>Contact</p>\n      <p>Working for Amnick</p>\n    </div>\n\n    <div class=\"col-sm-3 col-lg-2 text-light line-height pt-2\">\n      <!-- TODO: Convert to links and add same padding on all icons -->\n      <p><i class=\"fab fa-facebook-f mr-1\"></i> Facebook</p>\n      <p><i class=\"fab fa-twitter mr-1\"></i> Twitter</p>\n      <p><i class=\"fab fa-linkedin-in mr-1\"></i> LinkedIn</p>\n    </div>\n\n    <div class=\"col-sm-3 col-lg-3 text-light line-height pt-2\">\n      <p>Currently looking for new office.</p>\n      <p>+44 7886 837 410</p>\n      <p>info@amnick.com</p>\n    </div>\n\n  </div>\n</div>\n<!-- Footer container end -->\n"
+module.exports = "\n\n\n<!-- Footer container start -->\n<div class=\"container-fluid\" >\n  <div class=\"row py-5\">\n    <div class=\"col-sm-3 col-lg-2 offset-lg-2 text-light\">\n      <img class=\"ml-4\" src=\"assets/img/Logo.png\">\n      <p>&copy; Amnick 2019</p>\n      <!-- I don't understand why the copyright is located at the top of the footer? -->\n    </div>\n\n    <div class=\"col-sm-3 col-lg-2  text-light line-height pt-2\">\n \n      <!-- TODO: Convert to links -->\n      <p><a href=\"about-page.html\">About Us</a></p>\n      <p><a href=\"contact-page.html\">Contact</a></p>\n\n      <!-- PB: Is there an actual link for this section \"Working for Amnick\"? -->\n      <p>Working for Amnick</p>\n    </div>\n\n    <div class=\"col-sm-3 col-lg-2 text-light line-height pt-2\">\n      <!-- TODO: Convert to links and add same padding on all icons -->\n\n      <a href=\"https://www.facebook.com/amnicksocialenterprise1/\" ><i class=\"fab fa-facebook-f mr-2 fa-2x\"></i></a>\n      <a href=\"https://twitter.com/amnickse?lang=en-gb\"><i class=\"fab fa-twitter mr-2 fa-2x\"></i></a>\n      <a href=\"https://www.linkedin.com/company/amnick/about/\"><i class=\"fab fa-linkedin mr-2 fa-2x\"></i></a>\n    </div>\n \n\n    <div class=\"col-sm-3 col-lg-3 text-light line-height pt-2\">\n      <p>Currently looking for new office.</p>\n      <p>+44 7886 837 410</p>\n      <p>info@amnick.com</p>\n    </div>\n\n  </div>\n \n</div>\n<!-- Footer container end -->\n\n"
 
 /***/ }),
 
@@ -1113,6 +1194,29 @@ var TeamService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], TeamService);
     return TeamService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/user.ts":
+/*!*************************!*\
+  !*** ./src/app/user.ts ***!
+  \*************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+var User = /** @class */ (function () {
+    function User(name, email, message) {
+        this.name = name;
+        this.email = email;
+        this.message = message;
+    }
+    return User;
 }());
 
 

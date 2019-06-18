@@ -41,9 +41,9 @@ class CreateTeamMembersTable extends Migration
                 'name' => 'Esly',
                 'last_name' => 'Mwen',
                 'full_name' => 'Esly Lescano',
-                'occupation' => 'Web Developer',
+                'occupation' => 'Full-Stack Web Developer',
                 'avatar' => 'https://avatars3.githubusercontent.com/u/11892083?s=460&v=4',
-                'email' => 'esly@email.com'
+                'email' => 'eslylescano@gmail.com'
             ));
 
             DB::table('team_members')->insert(

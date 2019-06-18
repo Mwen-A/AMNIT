@@ -1,54 +1,50 @@
 <!-- Our team section start -->
 <section class="container-fluid text-center bg-4 py-5">
-  <div class="heading">
-    <h3 class="font-weight-bold text-light"><span class="text-custom">OUR</span> TEAM</h3>
-    <hr class="line mx-auto" style="width:4rem; ">
-  </div>
-
-  <!-- Our team container start -->
-  <div class="container-fluid px-3 mb-5">
-
-    <!-- Our team cards container start -->
-    <div class="row justify-content-around mb-5">
-      <div class="col-md-4" *ngFor="let member of teamMembers">
-        <!-- Team member card container start -->
-        <div class="card h-100">
-          <!-- Team member image -->
-          <img class="card-img-top rounded-circle" src={{member.avatar}} alt={{member.fullName}}>
-          <!-- Team member details -->
-          <div class="card-body">
-            <!-- Team member name -->
-            <h5 class="card-title">{{ member.fullName | uppercase }}</h5>
-            <!-- Team member occupation -->
-            <h6 class="card-subtitle mb-2">{{ member.occupation }}</h6>
-            <!-- Team member email -->
-            <a href="mailto:{{member.email}}" class="card-link font-weight-bold text-custom1">{{ member.email }}</a>
-          </div>
-          <div class="card-footer">
-            <!-- Team member social links -->
-            <div class="social">
-              <a
-                href={{social.url}}
-                target="_blank"
-                class="card-link font-weight-bold text-custom1"
-                title={{social.title}}
-                *ngFor="let social of member.links">
-                <i class="{{social.icon.type}} {{social.icon.url}}"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Team member card container end -->
-      </div>
+    <div class="heading">
+        <h3 class="font-weight-bold text-light"><span class="text-custom">OUR</span> TEAM</h3>
+        <hr class="line mx-auto" style="width:4rem; ">
     </div>
-    <!-- Our team cards container end -->
 
-    <!-- TODO: Change with the meet the team page when is made -->
-    <a routerLink="/about" class="btn btn-custom px-5">
+    <!-- Our team container start -->
+    <div class="container-fluid px-3 mb-5">
+
+        <!-- Our team cards container start -->
+        <div class="row justify-content-around mb-5">
+            <div class="col-md-4" *ngFor="let member of teamMembers">
+                <!-- Team member card container start -->
+                <div class="card h-100">
+                    <!-- Team member image -->
+                    <img class="card-img-top rounded-circle" src={{member.avatar}} alt={{member.full_name}}>
+                    <!-- Team member details -->
+                    <div class="card-body">
+                        <!-- Team member name -->
+                        <h5 class="card-title">{{ member.full_name | uppercase }}</h5>
+                        <!-- Team member occupation -->
+                        <h6 class="card-subtitle mb-2">{{ member.occupation }}</h6>
+                        <!-- Team member email -->
+                        <a href="mailto:{{member.email}}" class="card-link font-weight-bold text-custom1">{{ member.email }}</a>
+                    </div>
+                    <div class="card-footer">
+                        <!-- Team member social links -->
+                        <div class="social">
+                            <a href={{link.url}} target="_blank" class="card-link font-weight-bold text-custom1" title={{link.title}} *ngFor="let link of member.links">
+                                <i class="{{link.icons[0].type}} {{link.icons[0].url}}"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team member card container end -->
+            </div>
+        </div>
+        <!-- Our team cards container end -->
+
+        <!-- TODO: Change with the meet the team page when is made -->
+        <a routerLink="/about" class="btn btn-custom px-5">
       View all the team
     </a>
-  </div>
-  <!-- Our team container end -->
+    </div>
+    <!-- Our team container end -->
 
 </section>
 <!-- Our team section end -->

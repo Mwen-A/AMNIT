@@ -35,8 +35,8 @@ class CreateLinksTable extends Migration
             array(
                 'id'=>'2',
                 'team_member_id' => '1',
-                'icon_id' => '1',
-                'url' => 'https://github.com/markoboy'
+                'icon_id' => '2',
+                'url' => 'hhttps://github.com/markoboy'
             ));
 
             DB::table('links')->insert(
